@@ -44,14 +44,15 @@ if ( DX12LIB_BUILD_SAMPLES )
     add_subdirectory( Samples/03-Textures )
     add_subdirectory( Samples/04-HDR )
     add_subdirectory( Samples/05-Models )
+    add_subdirectory( Samples/Triangles )
 
-    set_target_properties( 01-ClearScreen 02-Cube 03-Textures 04-HDR 05-Models
+    set_target_properties( 01-ClearScreen 02-Cube 03-Textures 04-HDR 05-Models Triangles
         PROPERTIES
             FOLDER Samples
     )
 
     # Set the startup project.
     set_directory_properties( PROPERTIES 
-        VS_STARTUP_PROJECT 05-Models
+        VS_STARTUP_PROJECT Triangles
     )
 endif( DX12LIB_BUILD_SAMPLES )
